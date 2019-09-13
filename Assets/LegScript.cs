@@ -13,7 +13,7 @@ public class LegScript : MonoBehaviour
 
     public Rigidbody2D foot;
 
-    public float footSpeed = 2;
+    public float footSpeed = 2, kneeSpeed = 20;
 
     public Transform upperLeg, lowerLeg;
 
@@ -57,7 +57,12 @@ public class LegScript : MonoBehaviour
         }
         else if (inputV < 0)
         {
-
+            knee.useMotor = true;
+            var m = knee.motor;
+            float b = Vector2.SignedAngle(upperLeg.up, lowerLeg.up);
+            b = Mathf.Clamp(b, -1, 1);
+            m.motorSpeed = b * kneeSpeed;
+            knee.motor = m;
         }
         else
         {

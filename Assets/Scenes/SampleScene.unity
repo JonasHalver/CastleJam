@@ -471,17 +471,22 @@ PrefabInstance:
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.09484482
+      value: -0.03000009
       objectReference: {fileID: 0}
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.10300565
+      value: 0.11899996
       objectReference: {fileID: 0}
     - target: {fileID: 2535909730638073619, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: player
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966326236169095739, guid: 0cf262f2070330142aee74bab756393f,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.004348874
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cf262f2070330142aee74bab756393f, type: 3}
@@ -517,6 +522,7 @@ GameObject:
   - component: {fileID: 1752435568}
   - component: {fileID: 1752435567}
   - component: {fileID: 1752435570}
+  - component: {fileID: 1752435571}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -601,16 +607,16 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 1.57, y: -0.98}
-  m_ConnectedAnchor: {x: -0.10434878, y: 1.0247114}
+  m_Anchor: {x: 1.7, y: -0.98}
+  m_ConnectedAnchor: {x: 0.025651217, y: 1.0247114}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 180
 --- !u!233 &1752435568
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -625,16 +631,16 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -1.59, y: -0.89}
-  m_ConnectedAnchor: {x: 0.025651097, y: 1.0947113}
+  m_Anchor: {x: -1.62, y: -0.98}
+  m_ConnectedAnchor: {x: -0.004348874, y: 1.0047114}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 180
 --- !u!50 &1752435569
 Rigidbody2D:
   serializedVersion: 4
@@ -676,10 +682,36 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_UpperAngle: 180
+--- !u!61 &1752435571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752435564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 3.5, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 1
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4, y: 1.97}
+  m_EdgeRadius: 0
 --- !u!1001 &1791857042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -747,25 +779,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7966326236169095739, guid: 0cf262f2070330142aee74bab756393f,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.011879578
-      objectReference: {fileID: 0}
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.09484476
+      value: -0.030000031
       objectReference: {fileID: 0}
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.103005886
+      value: 0.11899996
       objectReference: {fileID: 0}
     - target: {fileID: 2535909730638073619, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: player
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966326236169095739, guid: 0cf262f2070330142aee74bab756393f,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.004348874
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966326236169095739, guid: 0cf262f2070330142aee74bab756393f,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.9802886
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cf262f2070330142aee74bab756393f, type: 3}
@@ -839,12 +876,17 @@ PrefabInstance:
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.09484482
+      value: -0.03000009
       objectReference: {fileID: 0}
     - target: {fileID: 7399911606442513648, guid: 0cf262f2070330142aee74bab756393f,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.10300565
+      value: 0.11899996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966326236169095739, guid: 0cf262f2070330142aee74bab756393f,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.004348874
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cf262f2070330142aee74bab756393f, type: 3}

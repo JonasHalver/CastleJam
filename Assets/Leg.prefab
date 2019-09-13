@@ -51,6 +51,7 @@ MonoBehaviour:
   hip: {fileID: 0}
   foot: {fileID: 1208925006400613872}
   footSpeed: 100
+  kneeSpeed: 20
   upperLeg: {fileID: 7966326236169095742}
   lowerLeg: {fileID: 7966326237301670733}
 --- !u!1 &3140440837406705327
@@ -80,7 +81,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140440837406705327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -3.25, z: 0}
+  m_LocalPosition: {x: 0.93, y: -3.354, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7588099723227760050}
@@ -300,7 +301,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: -1}
-  m_ConnectedAnchor: {x: -0.011879563, y: 0.95980966}
+  m_ConnectedAnchor: {x: 0.004348755, y: 0.9802887}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
@@ -335,13 +336,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7966326237301670730}
-  m_LocalRotation: {x: -0, y: -0, z: 0.13058409, w: 0.99143726}
-  m_LocalPosition: {x: 1.1643486, y: -2.2487113, z: 0.3132112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: -2.305, z: 0.3132112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7588099723227760050}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.007001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7966326237301670732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -427,7 +428,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: -0.93}
-  m_ConnectedAnchor: {x: -0.09484482, y: 0.10300577}
+  m_ConnectedAnchor: {x: -0.029999733, y: 0.1190002}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
