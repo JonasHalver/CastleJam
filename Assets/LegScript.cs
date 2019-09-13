@@ -9,13 +9,13 @@ public class LegScript : MonoBehaviour
 
     float inputH, inputV;
 
-    public HingeJoint2D knee, hip;
+    public HingeJoint2D knee, hip, foot;
 
-    public Rigidbody2D foot;
+    public Rigidbody2D footRB;
 
-    public float footSpeed = 2, kneeSpeed = 20;
+    public float footSpeed = 2, kneeSpeed = 50;
 
-    public Transform upperLeg, lowerLeg;
+    public Transform upperLeg, lowerLeg, footT;
 
     // Start is called before the first frame update
     void Start()
@@ -45,15 +45,22 @@ public class LegScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        foot.velocity = new Vector2(inputH * footSpeed * Time.deltaTime, foot.velocity.y);
+        if (!footT.GetComponent<Collider2D>().IsTouching(GameObject.Find("Ground").GetComponent<Collider2D>()))
+        {
+            footRB.velocity = new Vector2(inputH * footSpeed * Time.deltaTime, footRB.velocity.y);
+        }
 
         if (inputV > 0)
         {
             knee.useMotor = true;
-            var m = knee.motor;
-            m.motorSpeed = -Vector2.SignedAngle(upperLeg.up, lowerLeg.up);
-            knee.motor = m;
-            
+            var km = knee.motor;
+            km.motorSpeed = -Vector2.SignedAngle(upperLeg.up, lowerLeg.up);
+            knee.motor = km;
+
+            foot.useMotor = true;
+            var fm = foot.motor;
+            fm.motorSpeed = Vector2.SignedAngle(lowerLeg.up, footT.up)/5;
+            foot.motor = fm;
         }
         else if (inputV < 0)
         {
@@ -67,6 +74,7 @@ public class LegScript : MonoBehaviour
         else
         {
             knee.useMotor = false;
+            foot.useMotor = false;
         }
         
     }

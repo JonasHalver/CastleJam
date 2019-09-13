@@ -49,11 +49,13 @@ MonoBehaviour:
   player: 0
   knee: {fileID: 7966326236169095739}
   hip: {fileID: 0}
-  foot: {fileID: 1208925006400613872}
+  foot: {fileID: 1207391611159104200}
+  footRB: {fileID: 1208925006400613872}
   footSpeed: 100
   kneeSpeed: 20
   upperLeg: {fileID: 7966326236169095742}
   lowerLeg: {fileID: 7966326237301670733}
+  footT: {fileID: 1600905053645896982}
 --- !u!1 &3140440837406705327
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +68,7 @@ GameObject:
   - component: {fileID: 1338877592386268752}
   - component: {fileID: 1208925006400613872}
   - component: {fileID: 7250713871171687187}
+  - component: {fileID: 1207391611159104200}
   m_Layer: 0
   m_Name: Foot
   m_TagString: Untagged
@@ -183,6 +186,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.23, y: 0.16}
   m_EdgeRadius: 0
+--- !u!233 &1207391611159104200
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3140440837406705327}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 7966326237301670731}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -0.04, y: 0.06}
+  m_ConnectedAnchor: {x: -0.010000229, y: -0.9890002}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &7966326236169095738
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +348,6 @@ GameObject:
   - component: {fileID: 7966326237301670733}
   - component: {fileID: 7966326237301670732}
   - component: {fileID: 7966326237301670731}
-  - component: {fileID: 7399911606442513648}
   m_Layer: 0
   m_Name: Leg Part Bot
   m_TagString: Untagged
@@ -413,27 +439,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!233 &7399911606442513648
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7966326237301670730}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1208925006400613872}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: -0.93}
-  m_ConnectedAnchor: {x: -0.029999733, y: 0.1190002}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
